@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма ввода</title>
+</head>
+<body>
+
+<form action="/getresult">
+    ваше имя <input name="username"  required>
+    Введите слово для проверки <input name="word" checked="checked" required>
+    <input type="submit" value="Отправить">
+</form>
+<p >встречается <span th:text="${x}"></span> раз</p>
+</body>
+</html>

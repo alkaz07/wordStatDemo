@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <span th:text="${s}"></span>
+    <br>
+    <table border="1" style="width:300px">
+        <tr>
+            <th>юзер</th><th>слово</th>
+        </tr>
+        <tr th:each="line : ${tab_lines}">
+            <td><span th:text="${line.username}"/>   </td>  <td><span th:text="${line.word}"/></td>
+        </tr>
+
+    </table>
+
+    <form action="/save" method="post"><button>Сохранить</button></form>
+    <form action="/load" method="post"><button>Загрузить</button></form>
+    <p><span th:text="${message}"/></p>
+</body>
+</html>
